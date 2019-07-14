@@ -1,0 +1,16 @@
+version: '2.1'
+
+services:
+  express-docker-test:
+    build: code
+    # command: npm install --production --silent && mv node_modules ../
+    volumes:
+      - E:\git\express-docker-test\code\:/code/
+    environment:
+      NODE_ENV: production
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    command: npm start
+
